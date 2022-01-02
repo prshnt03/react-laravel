@@ -4,7 +4,7 @@ import SimpleReactValidator from 'simple-react-validator';
 import * as Helpers from '../Helpers'
 import LoadingOverlay from 'react-loading-overlay';
 import BeatLoader from 'react-spinners/BeatLoader'
-
+import Image from 'react-bootstrap/Image';
 class Login extends Component {
     constructor(props) {
         super(props)
@@ -92,8 +92,11 @@ class Login extends Component {
 
     }
 
+    
+
     render() {
-        return (
+         return (
+        
             <React.Fragment>
                 <LoadingOverlay
                     active={this.state.loading}
@@ -111,7 +114,7 @@ class Login extends Component {
                         <div className="brand-logo">
                             <h1 className="text-center" style={{color: '#da8cff'}}>{global.variables.site_name}</h1>
                         </div>
-                        <h4>Hello! let's get started</h4>
+                        <h4>Hello! let's get start</h4>
                         <form className="pt-3" ref={c => { this.form = c }} onSubmit={this.onSubmitHandle}>
                             <div className="form-group">
                                 <input type="text" className="form-control form-control-lg" name="email" id="email" placeholder="Email" value={this.state.email} onChange={this.onChangeHandle}/>
